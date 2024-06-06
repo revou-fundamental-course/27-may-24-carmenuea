@@ -1,13 +1,173 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset = "UTF-8">
-        <meta name="viewport" content="width=device-width", initial-scale="1.0">
-        <title>Gaby Portolio</title>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+    <title>Website Portolio</title>
 
-    <body>
+    <!--Font Poppins dari fonts.google.com-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="logo-icon"></div>
+      <section>
+        <a class="nav-item" href="#home">Home</a>
+        <a class="nav-item" href="#facilities">Tentang Kami</a>
+        <a class="nav-item" href="#message-us">Message Us</a>
+      </section>
+    </nav>
+
+    <section class="section-container">
+      <!--Home-->
+      <section id="home">
+        <header>
+          <h1>Hi <span id="name"></span>, Welcome to Website</h1>
+        </header>
+
+        <article>
+          <div class="banner-container">
+            <img class ="img-slideshow"
+            src="assets/school-banner.png" alt="school-banner" />
+            <img class ="img-slideshow"
+            src="assets/our-building.png" alt="our-building" />
+            <img class ="img-slideshow"
+            src="assets/our-classroom.png" alt="our-classroom" />
+            <img class ="img-slideshow"
+            src="assets/our-library.png" alt="our-library" />
+          </div>
+        </article>
+
+        <h1>Visi dan Misi</h1>
+        <div class="visi-misi">
+          <img src="assets/visi-misi.png" alt="visi-misi" />
+        </div>
+      </section>
+      <br>
+
+      <hr />
+
+      <!--Our Facilities-->
+      <section id="facilities">
+        <header>
+          <h1>Tentang Kami</h1>
+          <br />
+        </header>
+
+        <article class="facility-list">
+          <div>
+            <div
+              class="circle-image"
+              style="margin-left: 3px; align-items: center"
+            >
+              <img src="assets/school.jpg" alt="school" />
+            </div>
+            <h4>Lokasi Strategis</h4>
+          </div>
+
+          <div>
+            <div class="circle-image" style="margin-left: 5px">
+              <img src="assets/gym.jpg" alt="gym" />
+            </div>
+            <h4>Fasilitas Lengkap</h4>
+          </div>
+
+          <div>
+            <div class="circle-image" style="margin-left: 30px">
+              <img src="assets/cambridge.png" alt="cambridge" />
+            </div>
+            <h4>Kurikulum Internasional</h4>
+          </div>
+        </article>
+      </section>
+
+      <br />
+
+      <section>
+        <header>
+          <h1>Kontak Kami</h1>
+        </header>
+        <p>Alamat : Jalan Ir. Sutami 178, Jebres, Surakarta, Jawa Tengah</p>
+        <p>Kode Pos : 57126</p>
+        <p>No Telepon : (0271) 758230</p>
+        <p>Nomor Admin : 082145547920</p>
+        <p>Email : cavilauniversity@gmail.com</p>
+      </section>
+
+      <hr />
+
+      <!--Message Us-->
+      <section id="message-us">
+        <header>
+          <h1>Message Us</h1>
+        </header>
+      </section>
+
+      <section class="message-us-section">
+        <!--Form-->
+        <form class="ms-form">
+          <table>
+            <tr class="table-row">
+              <td class="label">Nama</td>
+              <td>:</td>
+              <td class="input-table">
+                <input required id="name-input" placeholder="Nama Lengkap" type="text" class="input-text"></input></td>
+            </tr>
+            <tr class="table-row">
+              <td class="label">Tanggal Lahir</td>
+              <td>:</td>
+              <td class="input-table">
+                <input required id="tanggal-lahir" type="date" class="input-text"></input></td>
+            </tr>
+            <tr class="table-row">
+              <td class="label">Jenis Kelamin</td>
+              <td>:</td>
+              <div class="gender-options">
+              <td class="input-table"><input id="male" type="radio" value="male" name="gender"></input>
+              <label for="male">Male</label>
+              <input id="female" type="radio" value="female" name="gender"></input>
+              <label for="female">Female</label>
+              </td>
+            </div>
+            </tr>              
+            <tr class="table-row"> 
+              <td class="label">Pesan</td>
+              <td>:</td>
+              <td class="input-table"><textarea required placeholder="Ketik disini" class="input-text" name="pesan"></textarea></td>
+            </tr>                                     
+          </table>
+          <p id="error-msg"></p>
+          <button type="button" id="kirim" onclick="validateForm()">Submit</button>
+        </form>
+          
+
+        <!--Result-->
+        <section class="result-container">
+          <div>
+            <div class="form-result">
+              <p>Nama : <span id="sender-name"></span></p>
+              <p>Tanggal Lahir : <span id="sender-tanggal-lahir"></span></p>
+              <p>Jenis Kelamin : <span id="sender-gender"></span></p>
+              <p>Pesan : <span id="sender-pesan"></span></p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <footer>
+      <p>Created By Gaby</p>
+    </footer>
+
+    <script src="js/script.js"></script>
     
-    </body>
-
+  </body>
 </html>
